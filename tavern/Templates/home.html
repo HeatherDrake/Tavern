@@ -1,0 +1,25 @@
+{% extends "base.html"%}
+
+{% block content %}
+    {% for lunch in lunches %}
+        <ul>
+            <li class="list-group-item"><a href="{% url 'tavern:detail' lunch.id %}">{{ lunch.nickname }}</a></li>
+        </ul>
+
+        <p class="home-detail">{{ lunch.user }}</p>
+        <p class="home-detail">{{ lunch.date }}<p>
+        <br/>
+    {% endfor %}
+
+
+
+{% endblock %}
+
+
+
+        <ul>
+
+        {# We can build a url with the name of our path using the url template tag #}
+{#        <li class="list-group-item"><a href="{% url 'photos:detail' contest.id %}">{{ contest.title }}</a></li>#}
+
+{#        </ul>#}
